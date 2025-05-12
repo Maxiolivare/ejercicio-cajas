@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.cajas{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.centrado{
+    text-align: center;
+}
+.cambio-fondo{
+    background-color: black;
+    color: white;
+}
+.tuist{
+    display: flex;
+    flex-direction: column-reverse !important;
+}

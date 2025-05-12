@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CajaS</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <main>
+        <section class="centrado">
+            <h1 id="titulo">Titulo</h1>
+            <div class="cajas">Abajo</div>
+            <div class="cajas">Centro</div>
+            <div class="cajas">Arriba</div>
+            <button id="todo">Apretame para hacer muchas cosas</button>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            let grupo = $('.cajas')
+            $('#todo').dblclick(function(){
+                grupo[1].remove()
+                grupo.last().addClass('cambio-fondo')
+                $('.centrado').prepend(grupo.last())
+                $('.centrado').before($('#titulo'))
+            })
+
+        })
+    </script>
+</body>
+</html>
